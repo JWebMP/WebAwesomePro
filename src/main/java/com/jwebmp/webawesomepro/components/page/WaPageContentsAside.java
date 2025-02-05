@@ -2,9 +2,11 @@ package com.jwebmp.webawesomepro.components.page;
 
 import com.jwebmp.core.base.html.DivSimple;
 
-public class WaPageContentsAside extends DivSimple<WaPageContentsAside> {
+public class WaPageContentsAside<J extends WaPageContentsAside<J>> extends DivSimple<J>
+{
 
-    public WaPageContentsAside() {
+    public WaPageContentsAside()
+    {
         addAttribute("slot", "aside");
     }
 

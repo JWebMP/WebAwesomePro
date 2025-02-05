@@ -8,6 +8,7 @@ module com.jwebmp.webawesomepro {
     exports com.jwebmp.webawesomepro.components.page;
 
     requires transitive com.jwebmp.webawesome;
+    requires com.jwebmp.core.base.angular.client;
     requires static lombok;
 
     provides IPageConfigurator with WebAwesomeProPageConfigurator;

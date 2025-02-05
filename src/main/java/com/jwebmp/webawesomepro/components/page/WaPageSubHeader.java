@@ -2,7 +2,7 @@ package com.jwebmp.webawesomepro.components.page;
 
 import com.jwebmp.core.base.html.DivSimple;
 
-public class WaPageSubHeader extends DivSimple<WaPageSubHeader>
+public class WaPageSubHeader<J extends WaPageSubHeader<J>> extends DivSimple<J>
 {
 
     public WaPageSubHeader()

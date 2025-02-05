@@ -4,21 +4,21 @@ import com.jwebmp.core.base.html.DivSimple;
 import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import com.jwebmp.webawesome.components.PageSize;
 
-public class WaPageContentsMain extends DivSimple<WaPageContentsMain>
+public class WaPageContentsMain<J extends WaPageContentsMain<J>> extends DivSimple<J>
 {
 
     public WaPageContentsMain()
     {
         setTag("main");
-        addAttribute("slot", "main");
+        //addAttribute("slot", "main");
 
-        addClass("wa-body-main-" + PageSize.Large.getSize());
+        addClass("wa-body-" + PageSize.Large.getSize());
     }
 
-    public WaPageContentsMain addContent(String id, IComponentHierarchyBase<?, ?> component)
+    public J addContent(String id, IComponentHierarchyBase<?, ?> component)
     {
         WaPageContent content = new WaPageContent(id, component);
         add(content);
-        return this;
+        return (J) this;
     }
 }

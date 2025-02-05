@@ -117,10 +117,10 @@ class WaPageTest
         waPage.getHeader().add(new WaCluster().setGap(PageSize.ExtraSmall));
         waPage.getSubHeader().add(new WaCluster().setNoWrap());
         waPage.getNavigationHeader().add(new WaFlank());
-        waPage.getNavigation().addNavLink("identification", "Identification");
-        waPage.getNavigation().addNavLink("range", "Range and Stuff");
-        waPage.getNavigation().addNavLink("behavior", "Behaviour");
-        waPage.getNavigation().addNavLink("conservation", "Conservation");
+        waPage.getNavigation().addNavAnchor("identification", "Identification");
+        waPage.getNavigation().addNavAnchor("range", "Range and Stuff");
+        waPage.getNavigation().addNavAnchor("behavior", "Behaviour");
+        waPage.getNavigation().addNavAnchor("conservation", "Conservation");
 
         waPage.getNavigationFooter().add(new WaFlank().setDisplayAsLink());
         waPage.getNavigationFooter().add(new WaFlank().setDisplayAsLink());

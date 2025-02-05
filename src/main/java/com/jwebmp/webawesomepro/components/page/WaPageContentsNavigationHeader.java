@@ -2,7 +2,7 @@ package com.jwebmp.webawesomepro.components.page;
 
 import com.jwebmp.core.base.html.DivSimple;
 
-public class WaPageContentsNavigationHeader extends DivSimple<WaPageContentsNavigationHeader>
+public class WaPageContentsNavigationHeader<J extends WaPageContentsNavigationHeader<J>> extends DivSimple<J>
 {
 
     public WaPageContentsNavigationHeader()

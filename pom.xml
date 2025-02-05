@@ -11,7 +11,7 @@
     <artifactId>web-awesome-pro</artifactId>
     <packaging>jar</packaging>
     <version>2.0.0-SNAPSHOT</version>
-    <name>WebAwesome</name>
+    <name>WebAwesome Pro</name>
 
     <description>The JWebMP Implementation for the Web Awesome framework</description>
     <url>https://backers.webawesome.com/</url>
