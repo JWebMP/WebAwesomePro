@@ -11,6 +11,9 @@ module com.jwebmp.webawesomepro {
     requires com.jwebmp.core.base.angular.client;
     requires static lombok;
 
+    requires static com.jwebmp.plugins.fontawesome5pro;
+    requires static com.jwebmp.plugins.fontawesome5;
+
     provides IPageConfigurator with WebAwesomeProPageConfigurator;
     provides IGuiceScanModuleInclusions with WebAwesomeProInclusionModule;
 

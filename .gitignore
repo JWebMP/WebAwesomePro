@@ -20,3 +20,5 @@ persistence.xml
 **/flatter.pom
 **/dependency-reduced-pom.pom
 flatter.pom
+/logs/
+/logs/

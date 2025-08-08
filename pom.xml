@@ -26,6 +26,13 @@
             <groupId>com.jwebmp.plugins</groupId>
             <artifactId>web-awesome</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.jwebmp.plugins</groupId>
+            <artifactId>font-awesome-pro</artifactId>
+            <optional>true</optional>
+        </dependency>
+
         <dependency>
             <groupId>com.jwebmp.core</groupId>
             <artifactId>jwebmp-testlib</artifactId>
