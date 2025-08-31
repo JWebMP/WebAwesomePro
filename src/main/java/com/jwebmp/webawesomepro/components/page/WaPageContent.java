@@ -19,15 +19,21 @@ public class WaPageContent extends DivSimple<WaPageContent>
     {
         this.id = id;
         this.component = component;
-        add(this.id);
+        if (this.id != null)
+        {
+            add(this.id);
+        }
         add(component);
     }
 
     public WaPageContent(String id, IComponentHierarchyBase<?, ?> component)
     {
-        this.id = new H2<>().setID(id);
+        if (id != null)
+        {
+            this.id = new H2<>().setID(id);
+            add(this.id);
+        }
         this.component = component;
-        add(this.id);
         add(component);
     }
 
