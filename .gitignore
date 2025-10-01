@@ -21,5 +21,4 @@ persistence.xml
 **/dependency-reduced-pom.pom
 flatter.pom
 /logs/
-/logs/
 /docs/
