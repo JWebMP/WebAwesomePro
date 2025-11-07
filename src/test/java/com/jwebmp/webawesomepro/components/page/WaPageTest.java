@@ -19,7 +19,8 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         assertNotNull(waPage.getBanner(), "Banner should not be null after calling getBanner()");
-        assertEquals(1, waPage.getChildren().size(), "Banner should be added as a child of WaPage");
+        assertEquals(1, waPage.getChildren()
+                              .size(), "Banner should be added as a child of WaPage");
     }
 
     @Test
@@ -27,7 +28,8 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         assertNotNull(waPage.getHeader(), "Header should not be null after calling getHeader()");
-        assertEquals(1, waPage.getChildren().size(), "Header should be added as a child of WaPage");
+        assertEquals(1, waPage.getChildren()
+                              .size(), "Header should be added as a child of WaPage");
     }
 
     @Test
@@ -35,7 +37,8 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         assertNotNull(waPage.getSubHeader(), "SubHeader should not be null after calling getSubHeader()");
-        assertEquals(1, waPage.getChildren().size(), "SubHeader should be added as a child of WaPage");
+        assertEquals(1, waPage.getChildren()
+                              .size(), "SubHeader should be added as a child of WaPage");
     }
 
     @Test
@@ -43,7 +46,8 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         assertNotNull(waPage.getNavigation(), "Navigation should not be null after calling getNavigation()");
-        assertEquals(1, waPage.getChildren().size(), "Navigation should be added as a child of WaPage");
+        assertEquals(1, waPage.getChildren()
+                              .size(), "Navigation should be added as a child of WaPage");
     }
 
     @Test
@@ -51,7 +55,8 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         assertNotNull(waPage.getNavigationFooter(), "NavigationFooter should not be null after calling getNavigationFooter()");
-        assertEquals(1, waPage.getChildren().size(), "NavigationFooter should be added as a child of WaPage");
+        assertEquals(1, waPage.getChildren()
+                              .size(), "NavigationFooter should be added as a child of WaPage");
     }
 
     @Test
@@ -59,7 +64,8 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         assertNotNull(waPage.getMain(), "Main should not be null after calling getMain()");
-        assertEquals(1, waPage.getChildren().size(), "Main should be added as a child of WaPage");
+        assertEquals(1, waPage.getChildren()
+                              .size(), "Main should be added as a child of WaPage");
     }
 
     @Test
@@ -67,7 +73,8 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         assertNotNull(waPage.getMainFooter(), "MainFooter should not be null after calling getMainFooter()");
-        assertEquals(1, waPage.getChildren().size(), "MainFooter should be added as a child of WaPage");
+        assertEquals(1, waPage.getChildren()
+                              .size(), "MainFooter should be added as a child of WaPage");
     }
 
     @Test
@@ -75,7 +82,8 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         assertNotNull(waPage.getAside(), "Aside should not be null after calling getAside()");
-        assertEquals(1, waPage.getChildren().size(), "Aside should be added as a child of WaPage");
+        assertEquals(1, waPage.getChildren()
+                              .size(), "Aside should be added as a child of WaPage");
     }
 
     @Test
@@ -83,7 +91,8 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         assertNotNull(waPage.getFooter(), "Footer should not be null after calling getFooter()");
-        assertEquals(1, waPage.getChildren().size(), "Footer should be added as a child of WaPage");
+        assertEquals(1, waPage.getChildren()
+                              .size(), "Footer should be added as a child of WaPage");
     }
 
     @Test
@@ -100,7 +109,8 @@ class WaPageTest
         assertNotNull(waPage.getAside());
         assertNotNull(waPage.getFooter());
 
-        assertEquals(9, waPage.getChildren().size(), "All components should be added to WaPage as children");
+        assertEquals(9, waPage.getChildren()
+                              .size(), "All components should be added to WaPage as children");
 
         String html = waPage.toString(true);
         // Debug output removed for production
@@ -126,36 +136,59 @@ class WaPageTest
     {
         WaPage waPage = new WaPage();
         waPage.setMobileBreakpoint(920);
-        waPage.getBanner().setShowWhenPageSize(PageSize.Small);
+        waPage.getBanner()
+              .setShowWhenPageSize(PageSize.Small);
 
-        waPage.getHeader().setSplit(true);
-        waPage.getHeader().add(new WaCluster());
-        waPage.getHeader().add(new WaCluster().setGap(PageSize.ExtraSmall));
-        waPage.getSubHeader().add(new WaCluster().setNoWrap());
-        waPage.getNavigationHeader().add(new WaFlank());
-        waPage.getNavigation().addNavAnchor("identification", "Identification");
-        waPage.getNavigation().addNavAnchor("range", "Range and Stuff");
-        waPage.getNavigation().addNavAnchor("behavior", "Behaviour");
-        waPage.getNavigation().addNavAnchor("conservation", "Conservation");
+        waPage.getHeader()
+              .setSplit();
+        waPage.getHeader()
+              .add(new WaCluster());
+        waPage.getHeader()
+              .add(new WaCluster().setGap(PageSize.ExtraSmall));
+        waPage.getSubHeader()
+              .add(new WaCluster().setNoWrap());
+        waPage.getNavigationHeader()
+              .add(new WaFlank());
+        waPage.getNavigation()
+              .addNavAnchor("identification", "Identification");
+        waPage.getNavigation()
+              .addNavAnchor("range", "Range and Stuff");
+        waPage.getNavigation()
+              .addNavAnchor("behavior", "Behaviour");
+        waPage.getNavigation()
+              .addNavAnchor("conservation", "Conservation");
 
-        waPage.getNavigationFooter().add(new WaFlank().setDisplayAsLink());
-        waPage.getNavigationFooter().add(new WaFlank().setDisplayAsLink());
+        waPage.getNavigationFooter()
+              .add(new WaFlank().setDisplayAsLink());
+        waPage.getNavigationFooter()
+              .add(new WaFlank().setDisplayAsLink());
 
-        waPage.getMainHeader().add(new WaFlank(false).setBorderRadius(PageSize.Medium));
+        waPage.getMainHeader()
+              .add(new WaFlank(false).setBorderRadius(PageSize.Medium));
 
-        waPage.getMain().addContent("identification", new Paragraph<>("Identification Nav"));
-        waPage.getMain().addContent("range", new Paragraph<>("Range Content"));
-        waPage.getMain().addContent("behavior", new Paragraph<>("Behavior Content"));
-        waPage.getMain().addContent("conservation", new Paragraph<>("Conservation Content"));
+        waPage.getMain()
+              .addContent("identification", new Paragraph<>("Identification Nav"));
+        waPage.getMain()
+              .addContent("range", new Paragraph<>("Range Content"));
+        waPage.getMain()
+              .addContent("behavior", new Paragraph<>("Behavior Content"));
+        waPage.getMain()
+              .addContent("conservation", new Paragraph<>("Conservation Content"));
 
-        waPage.getMainFooter().add(new Section<>());
+        waPage.getMainFooter()
+              .add(new Section<>());
 
-        waPage.getAside().add(new H2<>("Aside Content"));
+        waPage.getAside()
+              .add(new H2<>("Aside Content"));
 
-        waPage.getFooter().add(new WaCluster());
-        waPage.getFooter().add(new WaStack());
-        waPage.getFooter().add(new WaStack());
-        waPage.getFooter().add(new WaStack());
+        waPage.getFooter()
+              .add(new WaCluster());
+        waPage.getFooter()
+              .add(new WaStack());
+        waPage.getFooter()
+              .add(new WaStack());
+        waPage.getFooter()
+              .add(new WaStack());
 
         String html = waPage.toString(true);
         // Debug output removed for production
@@ -191,10 +224,12 @@ class WaPageTest
         assertTrue(waStackCount >= 3, "HTML should contain at least 3 wa-stack components"); // 3 in footer
     }
 
-    private int countOccurrences(String text, String substring) {
+    private int countOccurrences(String text, String substring)
+    {
         int count = 0;
         int index = 0;
-        while ((index = text.indexOf(substring, index)) != -1) {
+        while ((index = text.indexOf(substring, index)) != -1)
+        {
             count++;
             index += substring.length();
         }
@@ -222,18 +257,28 @@ class WaPageTest
         waPage.bindSubheaderHeight("subheaderHeightVar");
 
         // Verify attributes are set correctly
-        assertEquals("breakpointVar", waPage.getAttributes().get("[mobile-breakpoint]"), "Mobile breakpoint binding failed");
-        assertEquals("navOpenVar", waPage.getAttributes().get("[nav-open]"), "Nav open binding failed");
-        assertEquals("disableStickyVar", waPage.getAttributes().get("[disable-sticky]"), "Disable sticky binding failed");
-        assertEquals("placementVar", waPage.getAttributes().get("[navigation-placement]"), "Navigation placement binding failed");
+        assertEquals("breakpointVar", waPage.getAttributes()
+                                            .get("[mobile-breakpoint]"), "Mobile breakpoint binding failed");
+        assertEquals("navOpenVar", waPage.getAttributes()
+                                         .get("[nav-open]"), "Nav open binding failed");
+        assertEquals("disableStickyVar", waPage.getAttributes()
+                                               .get("[disable-sticky]"), "Disable sticky binding failed");
+        assertEquals("placementVar", waPage.getAttributes()
+                                           .get("[navigation-placement]"), "Navigation placement binding failed");
 
         // Verify style bindings are set correctly
-        assertEquals("menuWidthVar", waPage.getAttributes().get("[style.--menu-width]"), "Menu width binding failed");
-        assertEquals("mainWidthVar", waPage.getAttributes().get("[style.--main-width]"), "Main width binding failed");
-        assertEquals("asideWidthVar", waPage.getAttributes().get("[style.--aside-width]"), "Aside width binding failed");
-        assertEquals("bannerHeightVar", waPage.getAttributes().get("[style.--banner-height]"), "Banner height binding failed");
-        assertEquals("headerHeightVar", waPage.getAttributes().get("[style.--header-height]"), "Header height binding failed");
-        assertEquals("subheaderHeightVar", waPage.getAttributes().get("[style.--subheader-height]"), "Subheader height binding failed");
+        assertEquals("menuWidthVar", waPage.getAttributes()
+                                           .get("[style.--menu-width]"), "Menu width binding failed");
+        assertEquals("mainWidthVar", waPage.getAttributes()
+                                           .get("[style.--main-width]"), "Main width binding failed");
+        assertEquals("asideWidthVar", waPage.getAttributes()
+                                            .get("[style.--aside-width]"), "Aside width binding failed");
+        assertEquals("bannerHeightVar", waPage.getAttributes()
+                                              .get("[style.--banner-height]"), "Banner height binding failed");
+        assertEquals("headerHeightVar", waPage.getAttributes()
+                                              .get("[style.--header-height]"), "Header height binding failed");
+        assertEquals("subheaderHeightVar", waPage.getAttributes()
+                                                 .get("[style.--subheader-height]"), "Subheader height binding failed");
 
         // Verify the HTML output contains all the binding attributes
         String html = waPage.toString(true);
@@ -262,21 +307,25 @@ class WaPageTest
         // Test showNavigation method
         waPage.showNavigation();
         assertTrue(waPage.isNavOpen(), "Nav should be open after showNavigation");
-        assertEquals("true", waPage.getAttributes().get("nav-open"), "nav-open attribute should be true");
+        assertEquals("true", waPage.getAttributes()
+                                   .get("nav-open"), "nav-open attribute should be true");
 
         // Test hideNavigation method
         waPage.hideNavigation();
         assertFalse(waPage.isNavOpen(), "Nav should be closed after hideNavigation");
-        assertEquals("false", waPage.getAttributes().get("nav-open"), "nav-open attribute should be false");
+        assertEquals("false", waPage.getAttributes()
+                                    .get("nav-open"), "nav-open attribute should be false");
 
         // Test toggleNavigation method
         waPage.toggleNavigation();
         assertTrue(waPage.isNavOpen(), "Nav should be open after first toggle");
-        assertEquals("true", waPage.getAttributes().get("nav-open"), "nav-open attribute should be true");
+        assertEquals("true", waPage.getAttributes()
+                                   .get("nav-open"), "nav-open attribute should be true");
 
         waPage.toggleNavigation();
         assertFalse(waPage.isNavOpen(), "Nav should be closed after second toggle");
-        assertEquals("false", waPage.getAttributes().get("nav-open"), "nav-open attribute should be false");
+        assertEquals("false", waPage.getAttributes()
+                                    .get("nav-open"), "nav-open attribute should be false");
     }
 
     @Test
@@ -305,8 +354,10 @@ class WaPageTest
         assertEquals("32px", waPage.getSubheaderHeight(), "subheaderHeight property should be set");
 
         // Verify attributes are set correctly
-        assertEquals("header aside", waPage.getAttributes().get("disable-sticky"), "disable-sticky attribute should be set");
-        assertEquals("start", waPage.getAttributes().get("navigation-placement"), "navigation-placement attribute should be set");
+        assertEquals("header aside", waPage.getAttributes()
+                                           .get("disable-sticky"), "disable-sticky attribute should be set");
+        assertEquals("start", waPage.getAttributes()
+                                    .get("navigation-placement"), "navigation-placement attribute should be set");
 
         // Verify styles are set correctly
         String html = waPage.toString(true);
