@@ -22,3 +22,6 @@ persistence.xml
 flatter.pom
 /logs/
 /docs/
+/log/automation.log
+/log/browserstack-javaagent.debug.log
+/log/browserstack-javaagent.log
