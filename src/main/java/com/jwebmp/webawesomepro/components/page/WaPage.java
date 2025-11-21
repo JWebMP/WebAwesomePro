@@ -516,7 +516,7 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
      * @param navOpen The new value for the navOpen property.
      * @return This component for method chaining.
      */
-    public J setNavOpen(boolean navOpen)
+    public @org.jspecify.annotations.NonNull J setNavOpen(boolean navOpen)
     {
         this.navOpen = navOpen;
         addAttribute("nav-open", Boolean.toString(navOpen));
@@ -530,7 +530,7 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
      * @param disableSticky The new value for the disableSticky property.
      * @return This component for method chaining.
      */
-    public J setDisableSticky(String disableSticky)
+    public @org.jspecify.annotations.NonNull J setDisableSticky(String disableSticky)
     {
         this.disableSticky = disableSticky;
         addAttribute("disable-sticky", disableSticky);
@@ -544,7 +544,7 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
      * @param navigationPlacement The new value for the navigationPlacement property.
      * @return This component for method chaining.
      */
-    public J setNavigationPlacement(String navigationPlacement)
+    public @org.jspecify.annotations.NonNull J setNavigationPlacement(String navigationPlacement)
     {
         this.navigationPlacement = navigationPlacement;
         addAttribute("navigation-placement", navigationPlacement);
@@ -558,7 +558,7 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
      * @param menuWidth The new value for the menuWidth property.
      * @return This component for method chaining.
      */
-    public J setMenuWidth(String menuWidth)
+    public @org.jspecify.annotations.NonNull J setMenuWidth(String menuWidth)
     {
         this.menuWidth = menuWidth;
         addStyle("--menu-width", menuWidth);
@@ -572,7 +572,7 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
      * @param mainWidth The new value for the mainWidth property.
      * @return This component for method chaining.
      */
-    public J setMainWidth(String mainWidth)
+    public @org.jspecify.annotations.NonNull J setMainWidth(String mainWidth)
     {
         this.mainWidth = mainWidth;
         addStyle("--main-width", mainWidth);
@@ -586,7 +586,7 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
      * @param asideWidth The new value for the asideWidth property.
      * @return This component for method chaining.
      */
-    public J setAsideWidth(String asideWidth)
+    public @org.jspecify.annotations.NonNull J setAsideWidth(String asideWidth)
     {
         this.asideWidth = asideWidth;
         addStyle("--aside-width", asideWidth);
@@ -600,7 +600,7 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
      * @param bannerHeight The new value for the bannerHeight property.
      * @return This component for method chaining.
      */
-    public J setBannerHeight(String bannerHeight)
+    public @org.jspecify.annotations.NonNull J setBannerHeight(String bannerHeight)
     {
         this.bannerHeight = bannerHeight;
         addStyle("--banner-height", bannerHeight);
@@ -614,7 +614,7 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
      * @param headerHeight The new value for the headerHeight property.
      * @return This component for method chaining.
      */
-    public J setHeaderHeight(String headerHeight)
+    public @org.jspecify.annotations.NonNull J setHeaderHeight(String headerHeight)
     {
         this.headerHeight = headerHeight;
         addStyle("--header-height", headerHeight);
@@ -628,7 +628,7 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
      * @param subheaderHeight The new value for the subheaderHeight property.
      * @return This component for method chaining.
      */
-    public J setSubheaderHeight(String subheaderHeight)
+    public @org.jspecify.annotations.NonNull J setSubheaderHeight(String subheaderHeight)
     {
         this.subheaderHeight = subheaderHeight;
         addStyle("--subheader-height", subheaderHeight);

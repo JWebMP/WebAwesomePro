@@ -24,7 +24,7 @@ public class WaPageNavigationToggleIcon<J extends WaPageNavigationToggleIcon<J>>
      * @param pageSize The page size when this component should be shown.
      * @return This component for method chaining.
      */
-    public J setShowWhenPageSize(PageSize pageSize)
+    public @org.jspecify.annotations.NonNull J setShowWhenPageSize(PageSize pageSize)
     {
         addClass("wa-body-" + pageSize.getSize());
         return (J) this;

@@ -10,7 +10,7 @@ public class WaPageBanner<J extends WaPageBanner<J>> extends DivSimple<J>
         addAttribute("slot", "banner");
     }
 
-    public J setShowWhenPageSize(PageSize pageSize)
+    public @org.jspecify.annotations.NonNull J setShowWhenPageSize(PageSize pageSize)
     {
         addClass("wa-body-" + pageSize.getSize());
         return (J) this;

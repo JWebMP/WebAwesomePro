@@ -20,7 +20,7 @@ public class WaPageContentsMain<J extends WaPageContentsMain<J>> extends DivSimp
      * Sets the page size class to apply to the main content area. Can be called any time before render (e.g. in init()).
      */
     @SuppressWarnings("unchecked")
-    public J setPageSize(PageSize pageSize)
+    public @org.jspecify.annotations.NonNull J setPageSize(PageSize pageSize)
     {
         this.pageSize = pageSize == null ? PageSize.Large : pageSize;
         return (J) this;
