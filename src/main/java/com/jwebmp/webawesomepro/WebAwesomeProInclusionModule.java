@@ -1,6 +1,6 @@
 package com.jwebmp.webawesomepro;
 
-import com.guicedee.guicedinjection.interfaces.IGuiceScanModuleInclusions;
+import com.guicedee.client.services.config.IGuiceScanModuleInclusions;
 
 import java.util.HashSet;
 import java.util.Set;
