@@ -6,6 +6,9 @@ import com.jwebmp.webawesomepro.WebAwesomeProPageConfigurator;
 module com.jwebmp.webawesomepro {
 
     exports com.jwebmp.webawesomepro.components.page;
+    exports com.jwebmp.webawesomepro.components.chart;
+    exports com.jwebmp.webawesomepro.components.combobox;
+    exports com.jwebmp.webawesomepro.components.fileinput;
 
     requires transitive com.jwebmp.webawesome;
     requires com.jwebmp.core.base.angular.client;
@@ -14,9 +17,14 @@ module com.jwebmp.webawesomepro {
     requires static com.jwebmp.plugins.fontawesome5pro;
     requires static com.jwebmp.plugins.fontawesome5;
 
+    requires transitive com.google.common;
+
     provides IPageConfigurator with WebAwesomeProPageConfigurator;
     provides IGuiceScanModuleInclusions with WebAwesomeProInclusionModule;
 
     opens com.jwebmp.webawesomepro to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
     opens com.jwebmp.webawesomepro.components.page to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.chart to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.combobox to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.fileinput to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
 }
