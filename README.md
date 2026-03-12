@@ -11,14 +11,9 @@
 WebAwesome Pro is a **JWebMP plugin module** that provides seamless Angular directive wrappers and integration for the WebAwesome open-source web components library. It enables developers to compose rich, responsive layouts and component-based UIs within the JWebMP ecosystem.
 
 ### Quick Links
-- 📋 **[PACT.md](PACT.md)** – Project charter and vision
-- 📜 **[RULES.md](RULES.md)** – Project standards and technical constraints
-- 📖 **[GUIDES.md](GUIDES.md)** – Step-by-step development guides
-- 🗂️ **[IMPLEMENTATION.md](IMPLEMENTATION.md)** – Code organization and module map
-- 📚 **[GLOSSARY.md](GLOSSARY.md)** – Terminology index and prompt alignment
 - 🏗️ **[Architecture Docs](docs/architecture/README.md)** – C4 diagrams, sequences, ERD
-- 🤖 **[Prompt Reference](docs/PROMPT_REFERENCE.md)** – AI configuration and MCP setup
-- 💻 **[Copilot Instructions](.github/copilot-instructions.md)** – GitHub Copilot workspace rules
+- 📚 **[WebAwesome Docs](https://webawesome.com/)** – Official WebAwesome documentation
+- 🔗 **[JWebMP Home](https://jwebmp.com/)** – JWebMP framework documentation
 
 ---
 
@@ -40,8 +35,6 @@ WebAwesome Pro is a **JWebMP plugin module** that provides seamless Angular dire
   - CRTP fluent API for method chaining
   - Slot projection with semantic HTML (18 slots)
 - **Documentation**
-  - docs/AUDIT.md (Phase 2 implementation audit)
-  - Updated IMPLEMENTATION.md with WaPage details
   - Architecture diagrams updated
 
 ⏳ **Pending (Phase 3):**
@@ -57,12 +50,7 @@ WebAwesome Pro is a **JWebMP plugin module** that provides seamless Angular dire
 - Architecture documentation (C4 Context, Container, Component diagrams)
 - Sequence diagrams (page load, navigation toggle)
 - Entity Relationship Diagram (ERD)
-- PACT.md (project charter)
-- RULES.md (project standards)
-- GUIDES.md (development guides)
-- GLOSSARY.md (terminology and LLM alignment)
-- PROMPT_REFERENCE.md (AI configuration snapshot)
-- GitHub Copilot workspace instructions
+- Project documentation and guidelines
 
 ---
 
@@ -133,16 +121,7 @@ See **[Architecture Docs](docs/architecture/README.md)** for detailed C4, sequen
 
 ## Documentation Structure
 
-All project documentation follows a **documentation-first, modular approach**:
-
-### Strategic Artifacts (Host Project)
-- **PACT.md** – Project contract, vision, scope, phases, stakeholders
-- **RULES.md** – Standards, constraints, links to enterprise rules
-- **GUIDES.md** – How-to guides for component wrappers, testing, build, CI/CD
-- **IMPLEMENTATION.md** – Code map, module structure, status, next steps
-- **GLOSSARY.md** – Terminology index and LLM prompt alignment
-
-### Architecture & Diagrams (Host Project)
+### Architecture & Diagrams
 - **docs/architecture/c4-context.md** – System context and external dependencies
 - **docs/architecture/c4-container.md** – Major components and communication
 - **docs/architecture/c4-component-layout.md** – wa-page component deep dive
@@ -151,42 +130,30 @@ All project documentation follows a **documentation-first, modular approach**:
 - **docs/architecture/erd-domain.md** – Core data model
 - **docs/architecture/dependencies.md** – Maven, GuicedEE, Angular dependency tree
 
-### Enterprise Rules (Submodule)
-- **rules/RULES.md** – Enterprise rule reference (read-only submodule)
-- **rules/generative/** – Topic-specific rules (JWebMP, WebAwesome, Angular, GuicedEE, etc.)
-
 ---
 
-## Component Rules & Documentation
+## Component Documentation
 
-Each WebAwesome component has **modular, component-specific rules** organized in `docs/rules/`:
+WebAwesome Pro provides comprehensive Java wrappers for WebAwesome components.
 
-- **[Component Rules Index](docs/rules/README.md)** – Master index with links to all component rules
-- **Phase 2 Components** (✅ Complete):
-  - [WaPage](docs/rules/wa-page.rules.md) – Primary layout container with 18 sub-components
-  - [WaPageHeader](docs/rules/wa-page-header.rules.md) – Main page header
-  - And 9 more layout and control components (see index)
-- **Phase 3 Components** (⏳ Planned):
-  - [WaInput](docs/rules/wa-input.rules.md) – Form input field
-  - [WaSelect](docs/rules/wa-select.rules.md) – Dropdown select
-  - [WaButton](docs/rules/wa-button.rules.md) – Action button
-  - [WaCluster](docs/rules/wa-cluster.rules.md) – Horizontal layout
-  - [WaStack](docs/rules/wa-stack.rules.md) – Vertical layout
-  - [WaIconButton](docs/rules/wa-icon-button.rules.md) – Icon-only button
+### Available Components
 
-### How to Use Component Rules
+**Phase 2 Components** (✅ Complete):
+- WaPage – Primary layout container with 18 sub-components
+- WaPageHeader – Main page header
+- And 9 more layout and control components
 
-1. **Find Your Component:** See the [Component Rules Index](docs/rules/README.md) for a complete list
-2. **Review the Rule File:** Each `.rules.md` file contains:
-   - Overview and purpose
-   - JWebMP Java class details
-   - CRTP fluent API usage patterns
-   - Angular @Input/@Output properties
-   - Slot projection and styling
-   - Accessibility features
-   - Cross-links to enterprise rules
-3. **Check Examples:** Look for code examples in the rule file or [docs/page.example.md](docs/page.example.md)
-4. **Review Tests:** See [src/test/java/](src/test/java/) for comprehensive test examples
+**Phase 3 Components** (⏳ Planned):
+- WaInput – Form input field
+- WaSelect – Dropdown select
+- WaButton – Action button
+- WaCluster – Horizontal layout
+- WaStack – Vertical layout
+- WaIconButton – Icon-only button
+
+### Component Usage
+
+See the source code in [src/main/java/](src/main/java/) and tests in [src/test/java/](src/test/java/) for comprehensive examples of how to use each component with JWebMP's CRTP fluent API.
 
 ---
 
@@ -203,7 +170,6 @@ This project uses **enforced Prompt Language Alignment** for AI systems. Use the
 | Vertical Layout | `WaStack` |
 | Icon Button | `WaIconButton` |
 
-See **[GLOSSARY.md](GLOSSARY.md)** for full terminology index and topic-first composition.
 
 ---
 
@@ -224,11 +190,8 @@ See **[GLOSSARY.md](GLOSSARY.md)** for full terminology index and topic-first co
 
 ### Documentation
 - **Forward-Only:** Remove legacy docs; never keep compatibility stubs
-- **Modularity:** Project docs outside `rules/` submodule; link to enterprise rules
-- **Reciprocal Links:** PACT ↔ RULES ↔ GUIDES ↔ IMPLEMENTATION
+- **Modularity:** Component-specific documentation in docs/ directory
 - **Docs-as-Code:** Mermaid/PlantUML diagrams in version control
-
-See **[RULES.md](RULES.md)** for full technical and behavioral rules.
 
 ---
 
@@ -239,15 +202,13 @@ See **[RULES.md](RULES.md)** for full technical and behavioral rules.
 - **Browser Testing:** BrowserStack (optional, for cross-browser validation)
 - **CI/CD:** GitHub Actions (build, test, coverage on push/PR)
 
-See **[GUIDES.md](GUIDES.md#guide-unit-test-angular-directives)** for testing patterns.
-
 ---
 
 ## Phases & Roadmap
 
 ### Phase 1: Foundation ✅ (Current)
 - Architecture documentation and diagrams
-- PACT, RULES, GUIDES, GLOSSARY, IMPLEMENTATION
+- Project documentation and component rules
 - Skeleton implementations of configurators and inclusion modules
 
 ### Phase 2: Core Components (Next)
@@ -255,7 +216,7 @@ See **[GUIDES.md](GUIDES.md#guide-unit-test-angular-directives)** for testing pa
 - WaButtonDirective, WaInputDirective, WaSelectDirective
 - Layout directives (WaCluster, WaStack)
 - Component-specific tests
-- GUIDES updates with component examples
+- Documentation updates with component examples
 
 ### Phase 3: Advanced Features (Future)
 - Font Awesome Pro integration
@@ -269,17 +230,14 @@ See **[GUIDES.md](GUIDES.md#guide-unit-test-angular-directives)** for testing pa
 - GitHub Actions CI/CD pipeline
 - Release to Maven Central
 
-See **[PACT.md](PACT.md#-phases)** for phase details and success criteria.
-
 ---
 
 ## Contributing
 
 ### Before Writing Code
-1. Load **[docs/PROMPT_REFERENCE.md](docs/PROMPT_REFERENCE.md)** (AI configuration)
-2. Read **[PACT.md](PACT.md)** (project vision and scope)
-3. Review **[RULES.md](RULES.md)** (standards and constraints)
-4. Check **[GUIDES.md](GUIDES.md)** (development patterns)
+1. Check **[Architecture Docs](docs/architecture/README.md)** for system design
+2. Review existing source code in **src/main/java/** for patterns
+3. Review existing tests in **src/test/java/** for examples
 
 ### Commit Requirements
 - ✅ All tests pass (`mvn clean test`)
@@ -312,9 +270,9 @@ This project is licensed under the **Apache License 2.0**. See [LICENSE](LICENSE
 ## Support
 
 For questions or issues:
-1. Check **[GUIDES.md](GUIDES.md)** for how-to guides
-2. Review **[RULES.md](RULES.md)** for standards and constraints
-3. Consult **[Architecture Docs](docs/architecture/README.md)** for system design
+1. Consult **[Architecture Docs](docs/architecture/README.md)** for system design
+2. Review existing source code in **src/main/java/** for patterns
+3. Check existing tests in **src/test/java/** for examples
 4. Open an issue on GitHub with detailed context
 
 ---
