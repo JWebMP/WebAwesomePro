@@ -16,10 +16,13 @@
  */
 package com.jwebmp.webawesomepro;
 
+import com.jwebmp.core.base.angular.client.services.interfaces.AnnotationUtils;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.services.IPage;
 import com.jwebmp.core.services.IPageConfigurator;
+import lombok.Getter;
+import lombok.Setter;
 
 @PluginInformation(pluginName = "Web Awesome Pro",
         pluginDescription = "Make something awesome with open-source web components",
@@ -42,9 +45,40 @@ import com.jwebmp.core.services.IPageConfigurator;
 public class WebAwesomeProPageConfigurator
         implements IPageConfigurator<WebAwesomeProPageConfigurator> {
 
+    /**
+     * When true, Web Awesome Pro will be installed via npm from the private Cloudsmith registry.
+     * The .npmrc file will be configured with the required registry and auth token placeholder.
+     * The @web.awesome.me/webawesome-pro dependency will be added to package.json.
+     * Requires the WEBAWESOME_NPM_TOKEN environment variable to be set.
+     */
+    @Getter
+    @Setter
+    private static boolean useNpm = false;
+
+    /**
+     * The npm auth token for the Web Awesome Pro private registry.
+     * If left empty, the .npmrc will use ${WEBAWESOME_NPM_TOKEN} environment variable placeholder.
+     */
+    @Getter
+    @Setter
+    private static String npmToken = "";
+
     @Override
     public IPage<?> configure(IPage<?> page) {
-        //page.set
+        return page;
+    }
+
+    /**
+     * When useNpm is enabled, dynamically adds the @web.awesome.me/webawesome-pro
+     * TsDependency to the page body so it is included in the generated package.json.
+     */
+    @Override
+    public IPage<?> configureAngular(IPage<?> page) {
+        if (useNpm) {
+            page.getBody().addConfiguration(
+                    AnnotationUtils.getTsDependency("@web.awesome.me/webawesome-pro", "^3.3.1", "webawesome-pro")
+            );
+        }
         return page;
     }
 
