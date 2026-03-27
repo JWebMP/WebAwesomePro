@@ -76,7 +76,7 @@ public class WebAwesomeProPageConfigurator
     public IPage<?> configureAngular(IPage<?> page) {
         if (useNpm) {
             page.getBody().addConfiguration(
-                    AnnotationUtils.getTsDependency("@web.awesome.me/webawesome-pro", "^3.3.1", "webawesome-pro")
+                    AnnotationUtils.getTsDependency("@web.awesome.me/webawesome-pro", "^3.4.0", "webawesome-pro")
             );
         }
         return page;

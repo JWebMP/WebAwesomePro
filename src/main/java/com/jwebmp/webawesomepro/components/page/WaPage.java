@@ -168,6 +168,11 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
     private WaPageDialogWrapper<?> dialogWrapper;
 
     /**
+     * Whether to disable the navigation toggle button.
+     */
+    private Boolean disableNavigationToggle;
+
+    /**
      * Default constructor for the WaPage class.
      * Initializes the component with a default tag of `wa-page`.
      */
@@ -248,6 +253,10 @@ public class WaPage<J extends WaPage<J>> extends DivSimple<J> implements Breakpo
             if (footer != null)
             {
                 add(footer);
+            }
+            if (disableNavigationToggle != null && disableNavigationToggle)
+            {
+                addAttribute("disable-navigation-toggle", "");
             }
         }
         super.init();

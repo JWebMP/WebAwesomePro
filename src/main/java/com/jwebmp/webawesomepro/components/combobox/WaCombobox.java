@@ -89,6 +89,51 @@ public class WaCombobox<J extends WaCombobox<J>> extends DivSimple<J>
     private String hideEvent;
 
     /**
+     * The current input text value.
+     */
+    private String inputValue;
+
+    /**
+     * Whether the dropdown is open.
+     */
+    private Boolean open;
+
+    /**
+     * Whether to allow creating new options by typing.
+     */
+    private Boolean allowCreate;
+
+    /**
+     * Controls text auto-capitalization behavior.
+     */
+    private AutoCapitalize autocapitalize;
+
+    /**
+     * Controls autocorrect behavior (on, off).
+     */
+    private String autocorrect;
+
+    /**
+     * Controls virtual keyboard type on mobile.
+     */
+    private InputMode inputmode;
+
+    /**
+     * Controls the enter key label on the virtual keyboard.
+     */
+    private EnterKeyHint enterkeyhint;
+
+    /**
+     * Whether spellcheck is enabled for the input.
+     */
+    private Boolean spellcheck;
+
+    /**
+     * Event handler for when a new option is created via allowCreate.
+     */
+    private String createEvent;
+
+    /**
      * Creates a new WaCombobox component
      */
     public WaCombobox()
@@ -196,6 +241,44 @@ public class WaCombobox<J extends WaCombobox<J>> extends DivSimple<J>
             if (!Strings.isNullOrEmpty(hideEvent))
             {
                 addAttribute("(wa-hide)", hideEvent);
+            }
+            if (!Strings.isNullOrEmpty(createEvent))
+            {
+                addAttribute("(wa-create)", createEvent);
+            }
+
+            // New 3.4.1 attributes
+            if (!Strings.isNullOrEmpty(inputValue))
+            {
+                addAttribute("input-value", inputValue);
+            }
+            if (open != null && open)
+            {
+                addAttribute("open", "");
+            }
+            if (allowCreate != null && allowCreate)
+            {
+                addAttribute("allow-create", "");
+            }
+            if (autocapitalize != null)
+            {
+                addAttribute("autocapitalize", autocapitalize.toString());
+            }
+            if (!Strings.isNullOrEmpty(autocorrect))
+            {
+                addAttribute("autocorrect", autocorrect);
+            }
+            if (inputmode != null)
+            {
+                addAttribute("inputmode", inputmode.toString());
+            }
+            if (enterkeyhint != null)
+            {
+                addAttribute("enterkeyhint", enterkeyhint.toString());
+            }
+            if (spellcheck != null && spellcheck)
+            {
+                addAttribute("spellcheck", "");
             }
         }
         super.init();
