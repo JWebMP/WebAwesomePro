@@ -3,7 +3,7 @@
 ## Maven Dependency Tree (Simplified)
 
 ```
-com.jwebmp.plugins:web-awesome-pro:2.0.0-RC8 [JAR]
+com.jwebmp.plugins:web-awesome-pro:2.0.0-RC9 [JAR]
 ├── com.jwebmp.client:jwebmp-client [transitive]
 ├── com.jwebmp.plugins:web-awesome [transitive]
 ├── com.jwebmp.plugins:font-awesome-pro [optional]
