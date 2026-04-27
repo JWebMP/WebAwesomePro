@@ -1,7 +1,7 @@
 # WebAwesome Pro – Change Log
 
 **Format:** [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)  
-**Versioning:** [Semantic Versioning](https://semver.org/spec/v2.0.0.html)  
+**Versioning:** [Semantic Versioning](https://semver.org/spec/v2.0.0-SNAPSHOT.html)  
 **License:** Apache 2
 
 ---
@@ -42,7 +42,7 @@
 
 ---
 
-## [2.0.0-RC11] – Phase 2 Complete
+## [2.0.0-SNAPSHOT] – Phase 2 Complete
 
 ### Phase 2: WaPage Component ✅ (Complete)
 
@@ -142,6 +142,6 @@
 ---
 
 **Last Updated:** December 3, 2025  
-**Version:** 2.0.0-RC11 (Phase 2 Documentation Complete)  
+**Version:** 2.0.0-SNAPSHOT (Phase 2 Documentation Complete)  
 **Status:** Ready for Phase 3 implementation
 
