@@ -7,8 +7,6 @@ import com.jwebmp.core.base.html.DivSimple;
 import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import com.jwebmp.webawesome.components.Size;
 import lombok.Getter;
-import lombok.Setter;
-
 /**
  * The WaFileInput component provides a file upload input control.
  * It supports single and multiple file selection, accepted file types, and integrates
@@ -48,7 +46,6 @@ import lombok.Setter;
  * </pre>
  */
 @Getter
-@Setter
 @NgImportReference(value = "WaFileInputDirective", reference = "angular-awesome")
 @NgImportModule("WaFileInputDirective")
 public class WaFileInput<J extends WaFileInput<J>> extends DivSimple<J>
@@ -73,6 +70,90 @@ public class WaFileInput<J extends WaFileInput<J>> extends DivSimple<J>
     /**
      * Creates a new WaFileInput component
      */
+
+    @SuppressWarnings("unchecked")
+    public J setAccept(String accept)
+    {
+        this.accept = accept;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setMultiple(Boolean multiple)
+    {
+        this.multiple = multiple;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setDisabled(Boolean disabled)
+    {
+        this.disabled = disabled;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setLabel(String label)
+    {
+        this.label = label;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setHint(String hint)
+    {
+        this.hint = hint;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setRequired(Boolean required)
+    {
+        this.required = required;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setSize(Size size)
+    {
+        this.size = size;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setForm(String form)
+    {
+        this.form = form;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setButton(IComponentHierarchyBase<?, ?> button)
+    {
+        this.button = button;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setChangeEvent(String changeEvent)
+    {
+        this.changeEvent = changeEvent;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setFocusEvent(String focusEvent)
+    {
+        this.focusEvent = focusEvent;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setBlurEvent(String blurEvent)
+    {
+        this.blurEvent = blurEvent;
+        return (J) this;
+    }
     public WaFileInput()
     {
         setTag("wa-file-input");

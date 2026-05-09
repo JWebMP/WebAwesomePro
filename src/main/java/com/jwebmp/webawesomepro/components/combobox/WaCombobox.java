@@ -7,8 +7,6 @@ import com.jwebmp.core.base.html.DivSimple;
 import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import com.jwebmp.webawesome.components.Size;
 import lombok.Getter;
-import lombok.Setter;
-
 /**
  * The WaCombobox component is a combination of a text input and a dropdown select that allows
  * users to type to filter and select from a list of options. It supports single and multiple selection,
@@ -58,7 +56,6 @@ import lombok.Setter;
  * </pre>
  */
 @Getter
-@Setter
 @NgImportReference(value = "WaComboboxDirective", reference = "angular-awesome")
 @NgImportModule("WaComboboxDirective")
 public class WaCombobox<J extends WaCombobox<J>> extends DivSimple<J>
@@ -136,6 +133,209 @@ public class WaCombobox<J extends WaCombobox<J>> extends DivSimple<J>
     /**
      * Creates a new WaCombobox component
      */
+
+    @SuppressWarnings("unchecked")
+    public J setValue(String value)
+    {
+        this.value = value;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setPlaceholder(String placeholder)
+    {
+        this.placeholder = placeholder;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setDisabled(Boolean disabled)
+    {
+        this.disabled = disabled;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setClearable(Boolean clearable)
+    {
+        this.clearable = clearable;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setMultiple(Boolean multiple)
+    {
+        this.multiple = multiple;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setSize(Size size)
+    {
+        this.size = size;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setLabel(String label)
+    {
+        this.label = label;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setHint(String hint)
+    {
+        this.hint = hint;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setRequired(Boolean required)
+    {
+        this.required = required;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setForm(String form)
+    {
+        this.form = form;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setStart(IComponentHierarchyBase<?, ?> start)
+    {
+        this.start = start;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setEnd(IComponentHierarchyBase<?, ?> end)
+    {
+        this.end = end;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setClearIcon(IComponentHierarchyBase<?, ?> clearIcon)
+    {
+        this.clearIcon = clearIcon;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setInputEvent(String inputEvent)
+    {
+        this.inputEvent = inputEvent;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setChangeEvent(String changeEvent)
+    {
+        this.changeEvent = changeEvent;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setFocusEvent(String focusEvent)
+    {
+        this.focusEvent = focusEvent;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setBlurEvent(String blurEvent)
+    {
+        this.blurEvent = blurEvent;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setClearEvent(String clearEvent)
+    {
+        this.clearEvent = clearEvent;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setShowEvent(String showEvent)
+    {
+        this.showEvent = showEvent;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setHideEvent(String hideEvent)
+    {
+        this.hideEvent = hideEvent;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setInputValue(String inputValue)
+    {
+        this.inputValue = inputValue;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setOpen(Boolean open)
+    {
+        this.open = open;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setAllowCreate(Boolean allowCreate)
+    {
+        this.allowCreate = allowCreate;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setAutocapitalize(AutoCapitalize autocapitalize)
+    {
+        this.autocapitalize = autocapitalize;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setAutocorrect(String autocorrect)
+    {
+        this.autocorrect = autocorrect;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setInputmode(InputMode inputmode)
+    {
+        this.inputmode = inputmode;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setEnterkeyhint(EnterKeyHint enterkeyhint)
+    {
+        this.enterkeyhint = enterkeyhint;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setSpellcheck(Boolean spellcheck)
+    {
+        this.spellcheck = spellcheck;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setCreateEvent(String createEvent)
+    {
+        this.createEvent = createEvent;
+        return (J) this;
+    }
     public WaCombobox()
     {
         setTag("wa-combobox");

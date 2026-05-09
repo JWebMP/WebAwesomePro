@@ -2,8 +2,6 @@ package com.jwebmp.webawesomepro.components.chart;
 
 import com.jwebmp.core.base.html.DivSimple;
 import lombok.Getter;
-import lombok.Setter;
-
 /**
  * Base class for Web Awesome Pro chart components that share common properties
  * such as label, description, axis labels, and legend position.
@@ -11,7 +9,6 @@ import lombok.Setter;
  * This is a <strong>Pro</strong> component requiring a Web Awesome Pro licence.
  */
 @Getter
-@Setter
 public abstract class WaChartBase<J extends WaChartBase<J>> extends DivSimple<J>
 {
     private String label;
@@ -20,6 +17,48 @@ public abstract class WaChartBase<J extends WaChartBase<J>> extends DivSimple<J>
     private String yAxisLabel;
     private LegendPosition legendPosition;
     private Boolean stacked;
+
+    @SuppressWarnings("unchecked")
+    public J setLabel(String label)
+    {
+        this.label = label;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setDescription(String description)
+    {
+        this.description = description;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setXAxisLabel(String xAxisLabel)
+    {
+        this.xAxisLabel = xAxisLabel;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setYAxisLabel(String yAxisLabel)
+    {
+        this.yAxisLabel = yAxisLabel;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setLegendPosition(LegendPosition legendPosition)
+    {
+        this.legendPosition = legendPosition;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setStacked(Boolean stacked)
+    {
+        this.stacked = stacked;
+        return (J) this;
+    }
 
     protected WaChartBase(String tag)
     {

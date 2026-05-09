@@ -4,8 +4,6 @@ import com.jwebmp.core.base.angular.client.annotations.references.NgImportModule
 import com.jwebmp.core.base.angular.client.annotations.references.NgImportReference;
 import com.jwebmp.core.base.html.DivSimple;
 import lombok.Getter;
-import lombok.Setter;
-
 /**
  * The WaChart component provides a general-purpose chart wrapper using Web Awesome's chart system.
  * It accepts a configuration object and optional plugins.
@@ -23,13 +21,26 @@ import lombok.Setter;
  * </pre>
  */
 @Getter
-@Setter
 @NgImportReference(value = "WaChartDirective", reference = "angular-awesome")
 @NgImportModule("WaChartDirective")
 public class WaChart<J extends WaChart<J>> extends DivSimple<J>
 {
     private String config;
     private String plugins;
+
+    @SuppressWarnings("unchecked")
+    public J setConfig(String config)
+    {
+        this.config = config;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setPlugins(String plugins)
+    {
+        this.plugins = plugins;
+        return (J) this;
+    }
 
     public WaChart()
     {
