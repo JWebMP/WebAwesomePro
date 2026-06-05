@@ -11,7 +11,7 @@ import lombok.Setter;
 @PluginInformation(pluginName = "Web Awesome Pro",
         pluginDescription = "Make something awesome with open-source web components",
         pluginUniqueName = "WebAwesomePro",
-        pluginVersion = "0.0.1",
+        pluginVersion = "3.8.0",
         pluginCategories = "ui,web ui, framework,kit",
         pluginSubtitle = "Web Awesome is the biggest open-source library of meticulously designed, highly customizable, and framework-agnostic UI components.",
         pluginSourceUrl = "https://github.com/JWebMP/WebAwesomePro",
@@ -60,7 +60,7 @@ public class WebAwesomeProPageConfigurator
     public IPage<?> configureAngular(IPage<?> page) {
         if (useNpm) {
             page.getBody().addConfiguration(
-                    AnnotationUtils.getTsDependency("@web.awesome.me/webawesome-pro", "^3.4.0", "webawesome-pro")
+                    AnnotationUtils.getTsDependency("@web.awesome.me/webawesome-pro", "^3.8.0", "webawesome-pro")
             );
         }
         return page;

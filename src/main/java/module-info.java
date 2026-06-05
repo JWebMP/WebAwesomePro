@@ -13,6 +13,10 @@ module com.jwebmp.webawesomepro {
     exports com.jwebmp.webawesomepro.components.chart;
     exports com.jwebmp.webawesomepro.components.combobox;
     exports com.jwebmp.webawesomepro.components.fileinput;
+    exports com.jwebmp.webawesomepro.components.datepicker;
+    exports com.jwebmp.webawesomepro.components.dateinput;
+    exports com.jwebmp.webawesomepro.components.toast;
+    exports com.jwebmp.webawesomepro.components.video;
 
     requires transitive com.jwebmp.webawesome;
     requires com.jwebmp.core.base.angular.client;
@@ -33,4 +37,8 @@ module com.jwebmp.webawesomepro {
     opens com.jwebmp.webawesomepro.components.chart to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
     opens com.jwebmp.webawesomepro.components.combobox to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
     opens com.jwebmp.webawesomepro.components.fileinput to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.datepicker to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.dateinput to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.toast to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.video to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
 }

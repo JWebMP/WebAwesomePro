@@ -6,6 +6,36 @@
 
 ---
 
+## [3.8.0]
+
+### Added
+- `wa-date-picker` (`WaDatePicker`) – **Pro** inline calendar / form control (single/range) with
+  `view`, `focused-date`, `months`, `page-by`, week numbers/outside days, `wa-focus-day` and
+  `wa-view-change` events, and header/footer plus dynamic `day-YYYY-MM-DD` slots. Moved here from the
+  free module now that it is licensed as Pro.
+- `wa-date-input` (`WaDateInput`) – **Pro** calendar-backed date form control (single/range) with all
+  documented attributes, slots (including dynamic `day-YYYY-MM-DD`), events, and CSS custom properties.
+  Moved here from the free module now that it is licensed as Pro.
+- `wa-toast` / `wa-toast-item` (`WaToastContainer`, `WaToastItem`, `WaToastDataService`) – **Pro** toast
+  notification stack with placement, max/duration, newest-on-top, and the Angular `WaToastService`-backed
+  data service for programmatic toasts. Moved here from the free module now that it is licensed as Pro.
+- `wa-video` (`WaVideo`) – **Pro** video player with controls presets, poster/thumbnails, playback
+  state, autoplay variants, preload, icon slots, control-bar slots, playback methods, media events,
+  and the `--controls-color` / `--controls-background` / `--poster-play-button-background` custom properties.
+- `wa-video-playlist` (`WaVideoPlaylist`) – **Pro** playlist wrapping `<wa-video>` children with a
+  sidebar, `controls`/`icon-library`, `next()`/`previous()`/`goTo()` methods, and the `wa-video-change` event.
+
+### Changed
+- Bumped the `@web.awesome.me/webawesome-pro` dependency pin to `^3.8.0`.
+- Updated the `WebAwesomePro` plugin version reference to `3.8.0`.
+
+### Notes
+- Additive release. No breaking changes.
+- Size tokens remain `xs | s | m | l | xl | small | medium | large` (default `m`) for sized
+  components; the long-form values are **not** deprecated.
+
+---
+
 ## [Unreleased]
 
 ### Added (Phase 2 Documentation)
