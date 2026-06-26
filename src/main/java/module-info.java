@@ -32,13 +32,13 @@ module com.jwebmp.webawesomepro {
     provides IGuiceScanModuleInclusions with WebAwesomeProInclusionModule;
     provides NpmrcConfigurator with WebAwesomeProNpmrcConfigurator;
 
-    opens com.jwebmp.webawesomepro to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
-    opens com.jwebmp.webawesomepro.components.page.faicon to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
-    opens com.jwebmp.webawesomepro.components.chart to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
-    opens com.jwebmp.webawesomepro.components.combobox to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
-    opens com.jwebmp.webawesomepro.components.fileinput to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
-    opens com.jwebmp.webawesomepro.components.datepicker to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
-    opens com.jwebmp.webawesomepro.components.dateinput to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
-    opens com.jwebmp.webawesomepro.components.toast to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
-    opens com.jwebmp.webawesomepro.components.video to com.google.guice, com.jwebmp.core, com.fasterxml.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.page.faicon to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.chart to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.combobox to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.fileinput to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.datepicker to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.dateinput to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.toast to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.video to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
 }
