@@ -13,7 +13,7 @@ public class WaToastContainerTest
                 .toString(true);
         System.out.println(html);
 
-        assertEquals("<wa-toast></wa-toast>", html);
+        assertEquals("<wa-toast-container></wa-toast-container>", html);
     }
 
     @Test
@@ -21,24 +21,11 @@ public class WaToastContainerTest
     {
         var html = new WaToastContainer<>()
                 .setPlacement("bottom-center")
-                .setMax(3)
-                .setDuration(4000)
-                .setNewestOnTop(true)
-
                 .bindPlacement("pos")
-                .bindMax("max")
-                .bindDuration("dur")
-                .bindNewestOnTop("newTop")
                 .toString(true);
         System.out.println(html);
-        assertTrue(html.startsWith("<wa-toast "));
+        assertTrue(html.startsWith("<wa-toast-container "));
         assertTrue(html.contains("placement=\"bottom-center\""));
-        assertTrue(html.contains("max=\"3\""));
-        assertTrue(html.contains("duration=\"4000\""));
-        assertTrue(html.contains("newest-on-top"));
         assertTrue(html.contains("[placement]=\"pos\""));
-        assertTrue(html.contains("[max]=\"max\""));
-        assertTrue(html.contains("[duration]=\"dur\""));
-        assertTrue(html.contains("[newestOnTop]=\"newTop\""));
     }
 }

@@ -56,8 +56,8 @@ import lombok.Getter;
  * </pre>
  */
 @Getter
-@NgImportReference(value = "WaComboboxDirective", reference = "angular-awesome")
-@NgImportModule("WaComboboxDirective")
+@NgImportReference(value = "WaComboboxComponent", reference = "angular-awesome")
+@NgImportModule("WaComboboxComponent")
 public class WaCombobox<J extends WaCombobox<J>> extends DivSimple<J>
 {
     private String value;
