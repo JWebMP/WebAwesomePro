@@ -56,6 +56,15 @@ public class WaToastItem implements INgDataType<WaToastItem>
      */
     private Boolean withIcon;
 
+    /**
+     * Per toast override for the {@code --padding} CSS custom property.
+     * <p>
+     * Web Awesome 3.11.0 replaced the {@code padding} attribute on {@code <wa-toast-item>} with the
+     * {@code --padding} custom property; this value is forwarded to the rendered item as a style
+     * hint by the Angular toast service.
+     */
+    private String padding;
+
     public String getId()
     {
         return id;
@@ -141,6 +150,23 @@ public class WaToastItem implements INgDataType<WaToastItem>
     public WaToastItem setWithIcon(Boolean withIcon)
     {
         this.withIcon = withIcon;
+        return this;
+    }
+
+    public String getPadding()
+    {
+        return padding;
+    }
+
+    /**
+     * Sets the {@code --padding} CSS custom property applied to this toast item.
+     *
+     * @param padding A CSS length or Web Awesome space token, e.g. {@code var(--wa-space-m)}
+     * @return This toast item
+     */
+    public WaToastItem setPadding(String padding)
+    {
+        this.padding = padding;
         return this;
     }
 }

@@ -73,8 +73,8 @@ public class WaToastDataServiceExtendExampleTest
         // Custom helper should be present
         assertTrue(ts.contains("info(message: string"));
 
-        // Default DI scope remains "any" unless overridden
-        assertEquals("any", svc.providedIn());
+        // Default DI scope is "root" (WaToastDataService overrides providedIn) unless overridden again
+        assertEquals("root", svc.providedIn());
 
         // getData seeding example should return a DynamicData instance
         DynamicData seeded = svc.getData(null, null);

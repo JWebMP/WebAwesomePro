@@ -54,8 +54,8 @@ class WaChartTest
         assertTrue(s.contains("<wa-bar-chart"), "Should render wa-bar-chart tag");
         assertTrue(s.contains("label=\"Revenue\""), "Label expected");
         assertTrue(s.contains("description=\"Quarterly revenue overview\""), "Description expected");
-        assertTrue(s.contains("x-axis-label=\"Quarter\""), "X axis label expected");
-        assertTrue(s.contains("y-axis-label=\"Amount ($)\""), "Y axis label expected");
+        assertTrue(s.contains("x-label=\"Quarter\""), "X axis label expected");
+        assertTrue(s.contains("y-label=\"Amount ($)\""), "Y axis label expected");
         assertTrue(s.contains("legend-position=\"bottom\""), "Legend position expected");
         assertTrue(s.contains("stacked"), "Stacked boolean attribute expected");
         assertTrue(s.contains("</wa-bar-chart>"), "Closing tag expected");
@@ -84,8 +84,8 @@ class WaChartTest
         System.out.println(s);
 
         assertTrue(s.contains("label=\"Trends\""), "Label expected");
-        assertTrue(s.contains("x-axis-label=\"Month\""), "X axis label expected");
-        assertTrue(s.contains("y-axis-label=\"Users\""), "Y axis label expected");
+        assertTrue(s.contains("x-label=\"Month\""), "X axis label expected");
+        assertTrue(s.contains("y-label=\"Users\""), "Y axis label expected");
         assertTrue(s.contains("legend-position=\"top\""), "Legend position expected");
     }
 
@@ -161,8 +161,8 @@ class WaChartTest
         System.out.println(s);
 
         assertTrue(s.contains("label=\"Correlations\""), "Label expected");
-        assertTrue(s.contains("x-axis-label=\"Height\""), "X axis label expected");
-        assertTrue(s.contains("y-axis-label=\"Weight\""), "Y axis label expected");
+        assertTrue(s.contains("x-label=\"Height\""), "X axis label expected");
+        assertTrue(s.contains("y-label=\"Weight\""), "Y axis label expected");
     }
 
     // ── WaRadarChart ───────────────────────────────────────────────────
@@ -212,8 +212,8 @@ class WaChartTest
         System.out.println(s);
 
         assertTrue(s.contains("label=\"Data Points\""), "Label expected");
-        assertTrue(s.contains("x-axis-label=\"X\""), "X axis label expected");
-        assertTrue(s.contains("y-axis-label=\"Y\""), "Y axis label expected");
+        assertTrue(s.contains("x-label=\"X\""), "X axis label expected");
+        assertTrue(s.contains("y-label=\"Y\""), "Y axis label expected");
         assertTrue(s.contains("legend-position=\"bottom\""), "Legend position expected");
     }
 

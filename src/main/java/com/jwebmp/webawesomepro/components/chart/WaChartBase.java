@@ -6,6 +6,9 @@ import lombok.Getter;
  * Base class for Web Awesome Pro chart components that share common properties
  * such as label, description, axis labels, and legend position.
  * <p>
+ * Axis labels are emitted as the {@code x-label} and {@code y-label} attributes - Web Awesome
+ * 3.11.0 made these the explicit, documented attribute names.
+ * <p>
  * This is a <strong>Pro</strong> component requiring a Web Awesome Pro licence.
  */
 @Getter
@@ -80,11 +83,11 @@ public abstract class WaChartBase<J extends WaChartBase<J>> extends DivSimple<J>
             }
             if (xAxisLabel != null)
             {
-                addAttribute("x-axis-label", xAxisLabel);
+                addAttribute("x-label", xAxisLabel);
             }
             if (yAxisLabel != null)
             {
-                addAttribute("y-axis-label", yAxisLabel);
+                addAttribute("y-label", yAxisLabel);
             }
             if (legendPosition != null)
             {

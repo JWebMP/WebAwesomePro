@@ -21,7 +21,7 @@ public class WaToastDataServiceTest
         assertTrue(all.contains("clearAll(): void"), "clearAll() should be included in generated methods");
         assertTrue(all.contains("remove(id: string"), "remove() compatibility alias should be included in generated methods");
         assertTrue(all.contains("clear(): void"), "clear() compatibility alias should be included in generated methods");
-        assertEquals("any", svc.providedIn(), "Service should be provided in 'any' scope by default");
+        assertEquals("root", svc.providedIn(), "Service should be provided in 'root' scope so toasts are globally available");
     }
 
     @Test

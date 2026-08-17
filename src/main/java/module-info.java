@@ -12,6 +12,7 @@ module com.jwebmp.webawesomepro {
     exports com.jwebmp.webawesomepro.components.page.faicon;
     exports com.jwebmp.webawesomepro.components.chart;
     exports com.jwebmp.webawesomepro.components.combobox;
+    exports com.jwebmp.webawesomepro.components.datagrid;
     exports com.jwebmp.webawesomepro.components.fileinput;
     exports com.jwebmp.webawesomepro.components.datepicker;
     exports com.jwebmp.webawesomepro.components.dateinput;
@@ -36,6 +37,7 @@ module com.jwebmp.webawesomepro {
     opens com.jwebmp.webawesomepro.components.page.faicon to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
     opens com.jwebmp.webawesomepro.components.chart to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
     opens com.jwebmp.webawesomepro.components.combobox to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
+    opens com.jwebmp.webawesomepro.components.datagrid to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
     opens com.jwebmp.webawesomepro.components.fileinput to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
     opens com.jwebmp.webawesomepro.components.datepicker to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
     opens com.jwebmp.webawesomepro.components.dateinput to com.google.guice, com.jwebmp.core, tools.jackson.databind, com.jwebmp.core.angular;
