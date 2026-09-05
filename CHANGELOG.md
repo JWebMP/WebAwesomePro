@@ -6,6 +6,24 @@
 
 ---
 
+## [3.12.0]
+
+### Changed
+- Bumped the generated Pro dependency pin to `@web.awesome.me/webawesome-pro@^3.12.0`.
+
+---
+
+## [3.11.0]
+
+### Added
+- `wa-data-grid` (`WaDataGrid`) with typed columns, bindings, server-mode support, events, slots,
+  and styling options.
+
+### Changed
+- Toast item data supports `padding`, and chart axis labels render as `x-label` and `y-label`.
+
+---
+
 ## [3.8.0]
 
 ### Added
