@@ -13,7 +13,7 @@ public class WaToastContainerTest
                 .toString(true);
         System.out.println(html);
 
-        assertEquals("<wa-toast-container></wa-toast-container>", html);
+        assertEquals("<waa-toast-container></waa-toast-container>", html);
     }
 
     @Test
@@ -24,7 +24,7 @@ public class WaToastContainerTest
                 .bindPlacement("pos")
                 .toString(true);
         System.out.println(html);
-        assertTrue(html.startsWith("<wa-toast-container "));
+        assertTrue(html.startsWith("<waa-toast-container "));
         assertTrue(html.contains("placement=\"bottom-center\""));
         assertTrue(html.contains("[placement]=\"pos\""));
     }

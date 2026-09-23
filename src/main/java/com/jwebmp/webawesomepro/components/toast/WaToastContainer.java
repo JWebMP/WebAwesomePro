@@ -54,7 +54,7 @@ public class WaToastContainer<J extends WaToastContainer<J>> extends DivSimple<J
 
     public WaToastContainer()
     {
-        setTag("wa-toast-container");
+        setTag("waa-toast-container");
     }
 
     @Override

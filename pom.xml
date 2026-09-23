@@ -17,10 +17,6 @@
     <url>https://github.com/JWebMP/WebAwesomePro</url>
 
     <dependencies>
-        <dependency>
-            <groupId>com.jwebmp</groupId>
-            <artifactId>jwebmp-client</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.jwebmp.plugins</groupId>

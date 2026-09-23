@@ -20,14 +20,12 @@ module com.jwebmp.webawesomepro {
     exports com.jwebmp.webawesomepro.components.video;
 
     requires transitive com.jwebmp.webawesome;
-    requires com.jwebmp.core.base.angular.client;
     requires com.jwebmp.core.angular;
     requires static lombok;
 
     requires static com.jwebmp.plugins.fontawesome5pro;
     requires static com.jwebmp.plugins.fontawesome5;
 
-    requires transitive com.google.common;
 
     provides IPageConfigurator with WebAwesomeProPageConfigurator;
     provides IGuiceScanModuleInclusions with WebAwesomeProInclusionModule;
