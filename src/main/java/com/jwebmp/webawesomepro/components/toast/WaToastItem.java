@@ -26,6 +26,9 @@ public class WaToastItem implements INgDataType<WaToastItem>
      */
     private String message;
 
+    /** Optional icon name for the icon slot; null uses the variant default. */
+    private String icon;
+
     /**
      * Visual variant (brand, neutral, success, warning, danger).
      */
@@ -84,6 +87,17 @@ public class WaToastItem implements INgDataType<WaToastItem>
     public WaToastItem setMessage(String message)
     {
         this.message = message;
+        return this;
+    }
+
+    public String getIcon()
+    {
+        return icon;
+    }
+
+    public WaToastItem setIcon(String icon)
+    {
+        this.icon = icon;
         return this;
     }
 

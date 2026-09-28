@@ -6,6 +6,18 @@
 
 ---
 
+## [3.14.0]
+
+### Added
+- `WaCombobox` server loading through callback-bound `dataSource` or event-driven `server` mode,
+  including `loading`, `filter-debounce`, status slots, request/error events, and `reload()`.
+
+### Notes
+- The private `@web.awesome.me/webawesome-pro` pin remains `^3.13.0` because 3.14 availability
+  could not be authenticated in this checkout; `WEBAWESOME_NPM_TOKEN` is not set.
+
+---
+
 ## [3.12.0]
 
 ### Changed

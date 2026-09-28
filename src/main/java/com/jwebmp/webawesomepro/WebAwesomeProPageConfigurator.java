@@ -11,7 +11,7 @@ import lombok.Setter;
 @PluginInformation(pluginName = "Web Awesome Pro",
         pluginDescription = "Make something awesome with open-source web components",
         pluginUniqueName = "WebAwesomePro",
-        pluginVersion = "3.13.0",
+        pluginVersion = "3.14.0",
         pluginCategories = "ui,web ui, framework,kit",
         pluginSubtitle = "Web Awesome is the biggest open-source library of meticulously designed, highly customizable, and framework-agnostic UI components.",
         pluginSourceUrl = "https://github.com/JWebMP/WebAwesomePro",

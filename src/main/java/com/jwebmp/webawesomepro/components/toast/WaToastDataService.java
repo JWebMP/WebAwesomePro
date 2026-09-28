@@ -61,6 +61,11 @@ public class WaToastDataService<J extends WaToastDataService<J>> implements INgD
                          }""");
 
         list.add("""
+                         showContent(content: TemplateRef<unknown>, options: any = {}): string {
+                           return this.waToastService.showContent(content, options);
+                         }""");
+
+        list.add("""
                          update(id: string, changes: any = {}): void {
                            this.waToastService.update(id, changes);
                          }""");

@@ -130,6 +130,23 @@ public class WaCombobox<J extends WaCombobox<J>> extends DivSimple<J>
      */
     private String createEvent;
 
+    /** Enables event-driven server mode without a data-source callback. */
+    private Boolean server;
+
+    /** Indicates that a server options request is pending. */
+    private Boolean loading;
+
+    /** Delay in milliseconds before a server request is made for typed input. */
+    private Integer filterDebounce;
+
+    private IComponentHierarchyBase<?, ?> loadingSlot;
+    private IComponentHierarchyBase<?, ?> noResultsSlot;
+    private IComponentHierarchyBase<?, ?> emptySlot;
+    private IComponentHierarchyBase<?, ?> errorSlot;
+
+    private String optionsRequestEvent;
+    private String optionsErrorEvent;
+
     /**
      * Creates a new WaCombobox component
      */
@@ -336,6 +353,56 @@ public class WaCombobox<J extends WaCombobox<J>> extends DivSimple<J>
         this.createEvent = createEvent;
         return (J) this;
     }
+
+    @SuppressWarnings("unchecked")
+    public J setServer(Boolean server)
+    {
+        this.server = server;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setLoading(Boolean loading)
+    {
+        this.loading = loading;
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J setFilterDebounce(Integer filterDebounce)
+    {
+        this.filterDebounce = filterDebounce;
+        return (J) this;
+    }
+
+    /** Binds Angular Awesome's callback-based {@code dataSource} input. */
+    @SuppressWarnings("unchecked")
+    public J bindDataSource(String expression)
+    {
+        addAttribute("[dataSource]", expression);
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked")
+    public J bindLoading(String expression)
+    {
+        addAttribute("[loading]", expression);
+        return (J) this;
+    }
+
+    @SuppressWarnings("unchecked") public J setLoadingSlot(IComponentHierarchyBase<?, ?> value) { loadingSlot = value; return (J) this; }
+    @SuppressWarnings("unchecked") public J setNoResultsSlot(IComponentHierarchyBase<?, ?> value) { noResultsSlot = value; return (J) this; }
+    @SuppressWarnings("unchecked") public J setEmptySlot(IComponentHierarchyBase<?, ?> value) { emptySlot = value; return (J) this; }
+    @SuppressWarnings("unchecked") public J setErrorSlot(IComponentHierarchyBase<?, ?> value) { errorSlot = value; return (J) this; }
+    @SuppressWarnings("unchecked") public J setOptionsRequestEvent(String value) { optionsRequestEvent = value; return (J) this; }
+    @SuppressWarnings("unchecked") public J setOptionsErrorEvent(String value) { optionsErrorEvent = value; return (J) this; }
+
+    /** Requests options again at runtime; the Angular directive exposes the native method. */
+    @SuppressWarnings("unchecked")
+    public J reload()
+    {
+        return (J) this;
+    }
     public WaCombobox()
     {
         setTag("wa-combobox");
@@ -480,8 +547,41 @@ public class WaCombobox<J extends WaCombobox<J>> extends DivSimple<J>
             {
                 addAttribute("spellcheck", "");
             }
+            if (Boolean.TRUE.equals(server))
+            {
+                addAttribute("server", "");
+            }
+            if (Boolean.TRUE.equals(loading))
+            {
+                addAttribute("loading", "");
+            }
+            if (filterDebounce != null)
+            {
+                addAttribute("filter-debounce", filterDebounce.toString());
+            }
+            addSlot(loadingSlot, "loading");
+            addSlot(noResultsSlot, "no-results");
+            addSlot(emptySlot, "empty");
+            addSlot(errorSlot, "error");
+            if (!Strings.isNullOrEmpty(optionsRequestEvent))
+            {
+                addAttribute("(wa-options-request)", optionsRequestEvent);
+            }
+            if (!Strings.isNullOrEmpty(optionsErrorEvent))
+            {
+                addAttribute("(wa-options-error)", optionsErrorEvent);
+            }
         }
         super.init();
+    }
+
+    private void addSlot(IComponentHierarchyBase<?, ?> component, String slot)
+    {
+        if (component != null)
+        {
+            component.asAttributeBase().addAttribute("slot", slot);
+            add(component);
+        }
     }
 }
 

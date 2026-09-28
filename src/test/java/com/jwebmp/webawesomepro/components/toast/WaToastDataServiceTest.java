@@ -16,6 +16,7 @@ public class WaToastDataServiceTest
         String all = String.join("\n\n", methods);
         assertTrue(all.contains("setConfig(partial: any"), "setConfig() should be included in generated methods");
         assertTrue(all.contains("show(message: string"), "show() should be included in generated methods");
+        assertTrue(all.contains("showContent(content: TemplateRef<unknown>"), "Rich Angular content should be available to generated clients");
         assertTrue(all.contains("update(id: string"), "update() should be included in generated methods");
         assertTrue(all.contains("close(id: string"), "close() should be included in generated methods");
         assertTrue(all.contains("clearAll(): void"), "clearAll() should be included in generated methods");

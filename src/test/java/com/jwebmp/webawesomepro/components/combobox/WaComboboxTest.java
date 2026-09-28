@@ -137,5 +137,34 @@ class WaComboboxTest
         assertTrue(s.contains("hint=\"Select one or more tags\""), "Hint expected");
         assertTrue(s.contains("</wa-combobox>"), "Closing tag expected");
     }
+
+    @Test
+    void rendersServerLoadingApi()
+    {
+        var s = new WaCombobox<>()
+                .setServer(true)
+                .setLoading(true)
+                .setFilterDebounce(400)
+                .bindDataSource("loadOptions")
+                .bindLoading("optionsLoading")
+                .setLoadingSlot(new com.jwebmp.core.base.html.DivSimple<>().setText("Loading"))
+                .setNoResultsSlot(new com.jwebmp.core.base.html.DivSimple<>().setText("No matches"))
+                .setErrorSlot(new com.jwebmp.core.base.html.DivSimple<>().setText("Failed"))
+                .setOptionsRequestEvent("requestOptions($event)")
+                .setOptionsErrorEvent("handleOptionsError($event)")
+                .reload()
+                .toString(true);
+
+        assertTrue(s.contains("server"));
+        assertTrue(s.contains("loading"));
+        assertTrue(s.contains("filter-debounce=\"400\""));
+        assertTrue(s.contains("[dataSource]=\"loadOptions\""));
+        assertTrue(s.contains("[loading]=\"optionsLoading\""));
+        assertTrue(s.contains("slot=\"loading\""));
+        assertTrue(s.contains("slot=\"no-results\""));
+        assertTrue(s.contains("slot=\"error\""));
+        assertTrue(s.contains("(wa-options-request)=\"requestOptions($event)\""));
+        assertTrue(s.contains("(wa-options-error)=\"handleOptionsError($event)\""));
+    }
 }
 
