@@ -60,9 +60,16 @@ public class WaToastDataService<J extends WaToastDataService<J>> implements INgD
                            return this.waToastService.show(message, options);
                          }""");
 
+        // Rich content is optional in older angular-awesome distributions; fail explicitly when unavailable.
         list.add("""
                          showContent(content: TemplateRef<unknown>, options: any = {}): string {
-                           return this.waToastService.showContent(content, options);
+                           const service = this.waToastService as WaToastService & {
+                             showContent?: (content: TemplateRef<unknown>, options: any) => string
+                           };
+                           if (typeof service.showContent !== 'function') {
+                             throw new Error('This angular-awesome version does not support template toast content');
+                           }
+                           return service.showContent(content, options);
                          }""");
 
         list.add("""
